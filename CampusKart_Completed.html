@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusKart | College Shopping</title>
+  <!-- Tailwind CSS browser CDN supplied in the college starter file -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body id="top" class="min-h-screen bg-indigo-50 text-slate-900">
+  <!-- Navigation bar -->
+  <nav class="flex items-center justify-between gap-4 bg-indigo-950 px-4 py-4 text-white sm:px-8">
+    <h1 class="text-xl font-extrabold tracking-tight text-white sm:text-2xl">
+      Campus<span class="text-amber-400">Kart</span>
+    </h1>
+    <div class="flex items-center gap-4 text-sm font-medium sm:gap-6">
+      <a href="#products" class="transition-colors hover:text-amber-400">Shop</a>
+      <a href="#cart" class="transition-colors hover:text-amber-400">Cart (<span id="cart-count">0</span>)</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Sale banner: stacked and centred on phones, side-by-side on larger screens -->
+    <section class="flex flex-col items-center justify-between gap-8 bg-gradient-to-r from-violet-700 via-indigo-600 to-indigo-500 px-6 py-10 text-center text-white sm:px-10 md:flex-row md:text-left lg:px-16 lg:py-14">
+      <div class="max-w-2xl">
+        <p class="mb-2 text-sm font-bold uppercase tracking-[0.2em] text-amber-300">Back to campus offers</p>
+        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">College Sale</h2>
+        <p class="mt-3 text-sm text-indigo-100 sm:text-base">Up to 50% off on bags, books and more</p>
+        <a href="#products" class="mt-6 inline-block rounded-md bg-amber-400 px-5 py-3 text-sm font-bold text-indigo-950 shadow transition-colors hover:bg-amber-300 focus:outline-2 focus:outline-offset-2 focus:outline-white">Shop Now</a>
+      </div>
+      <div class="flex min-h-40 w-40 shrink-0 items-center justify-center rounded-2xl border-4 border-amber-200/60 bg-amber-400 p-5 text-center text-indigo-950 shadow-xl sm:min-h-48 sm:w-48">
+        <div>
+          <p class="text-4xl font-black sm:text-5xl">50%</p>
+          <p class="mt-1 text-lg font-extrabold tracking-widest">OFF</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why shop with us -->
+    <section aria-label="Why shop with us" class="grid grid-cols-1 gap-4 px-5 py-7 sm:grid-cols-3 sm:px-8">
+      <div class="rounded-xl border border-indigo-100 bg-white p-4 text-center shadow-sm transition-shadow hover:shadow-md">
+        <p class="text-2xl font-bold text-indigo-600">Free</p>
+        <p class="text-sm text-slate-500">Delivery</p>
+      </div>
+      <div class="rounded-xl border border-indigo-100 bg-white p-4 text-center shadow-sm transition-shadow hover:shadow-md">
+        <p class="text-2xl font-bold text-indigo-600">7-Day</p>
+        <p class="text-sm text-slate-500">Returns</p>
+      </div>
+      <div class="rounded-xl border border-indigo-100 bg-white p-4 text-center shadow-sm transition-shadow hover:shadow-md">
+        <p class="text-2xl font-bold text-indigo-600">COD</p>
+        <p class="text-sm text-slate-500">Available</p>
+      </div>
+    </section>
+
+    <!-- All product cards must remain inside this section -->
+    <section id="products" class="px-5 pb-10 pt-3 sm:px-8 lg:px-10">
+      <div class="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-widest text-indigo-600">Student essentials</p>
+          <h2 class="mt-1 text-2xl font-extrabold text-indigo-950 sm:text-3xl">Shop our products</h2>
+        </div>
+        <p class="text-sm text-slate-500">Great picks for your campus life</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Product 1 -->
+        <article class="flex h-full flex-col overflow-hidden rounded-xl border border-indigo-100 bg-white p-3 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <img class="h-40 w-full rounded-lg bg-indigo-100 object-cover" src="https://placehold.co/400x300/e0e7ff/4338ca?text=Backpack" alt="Backpack" loading="lazy">
+          <div class="flex flex-1 flex-col px-1 pt-3">
+            <h3 class="text-lg font-bold text-indigo-950">Backpack</h3>
+            <p class="mt-2 font-bold text-slate-900">Rs. 799 <span class="ml-1 text-sm font-normal text-slate-400 line-through">Rs. 1,299</span></p>
+            <button type="button" class="mt-4 w-full rounded-md bg-indigo-600 px-3 py-2.5 text-sm font-bold text-white transition-colors hover:bg-indigo-700 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600" data-add>Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="flex h-full flex-col overflow-hidden rounded-xl border border-indigo-100 bg-white p-3 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <img class="h-40 w-full rounded-lg bg-indigo-100 object-cover" src="https://placehold.co/400x300/e0e7ff/4338ca?text=Notebooks" alt="Notebook set" loading="lazy">
+          <div class="flex flex-1 flex-col px-1 pt-3">
+            <h3 class="text-lg font-bold text-indigo-950">Notebook Set</h3>
+            <p class="mt-2 font-bold text-slate-900">Rs. 199 <span class="ml-1 text-sm font-normal text-slate-400 line-through">Rs. 299</span></p>
+            <button type="button" class="mt-4 w-full rounded-md bg-indigo-600 px-3 py-2.5 text-sm font-bold text-white transition-colors hover:bg-indigo-700 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600" data-add>Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="flex h-full flex-col overflow-hidden rounded-xl border border-indigo-100 bg-white p-3 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <img class="h-40 w-full rounded-lg bg-indigo-100 object-cover" src="https://placehold.co/400x300/e0e7ff/4338ca?text=Water+Bottle" alt="Water bottle" loading="lazy">
+          <div class="flex flex-1 flex-col px-1 pt-3">
+            <h3 class="text-lg font-bold text-indigo-950">Water Bottle</h3>
+            <p class="mt-2 font-bold text-slate-900">Rs. 349 <span class="ml-1 text-sm font-normal text-slate-400 line-through">Rs. 499</span></p>
+            <button type="button" class="mt-4 w-full rounded-md bg-indigo-600 px-3 py-2.5 text-sm font-bold text-white transition-colors hover:bg-indigo-700 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600" data-add>Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="flex h-full flex-col overflow-hidden rounded-xl border border-indigo-100 bg-white p-3 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <img class="h-40 w-full rounded-lg bg-indigo-100 object-cover" src="https://placehold.co/400x300/e0e7ff/4338ca?text=Earphones" alt="Earphones" loading="lazy">
+          <div class="flex flex-1 flex-col px-1 pt-3">
+            <h3 class="text-lg font-bold text-indigo-950">Earphones</h3>
+            <p class="mt-2 font-bold text-slate-900">Rs. 599 <span class="ml-1 text-sm font-normal text-slate-400 line-through">Rs. 999</span></p>
+            <button type="button" class="mt-4 w-full rounded-md bg-indigo-600 px-3 py-2.5 text-sm font-bold text-white transition-colors hover:bg-indigo-700 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600" data-add>Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Product 5 -->
+        <article class="flex h-full flex-col overflow-hidden rounded-xl border border-indigo-100 bg-white p-3 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <img class="h-40 w-full rounded-lg bg-indigo-100 object-cover" src="https://placehold.co/400x300/e0e7ff/4338ca?text=Lunch+Box" alt="Lunch box" loading="lazy">
+          <div class="flex flex-1 flex-col px-1 pt-3">
+            <h3 class="text-lg font-bold text-indigo-950">Lunch Box</h3>
+            <p class="mt-2 font-bold text-slate-900">Rs. 449 <span class="ml-1 text-sm font-normal text-slate-400 line-through">Rs. 599</span></p>
+            <button type="button" class="mt-4 w-full rounded-md bg-indigo-600 px-3 py-2.5 text-sm font-bold text-white transition-colors hover:bg-indigo-700 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600" data-add>Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Product 6 -->
+        <article class="flex h-full flex-col overflow-hidden rounded-xl border border-indigo-100 bg-white p-3 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <img class="h-40 w-full rounded-lg bg-indigo-100 object-cover" src="https://placehold.co/400x300/e0e7ff/4338ca?text=Calculator" alt="Scientific calculator" loading="lazy">
+          <div class="flex flex-1 flex-col px-1 pt-3">
+            <h3 class="text-lg font-bold text-indigo-950">Calculator</h3>
+            <p class="mt-2 font-bold text-slate-900">Rs. 699 <span class="ml-1 text-sm font-normal text-slate-400 line-through">Rs. 899</span></p>
+            <button type="button" class="mt-4 w-full rounded-md bg-indigo-600 px-3 py-2.5 text-sm font-bold text-white transition-colors hover:bg-indigo-700 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600" data-add>Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Product 7 -->
+        <article class="flex h-full flex-col overflow-hidden rounded-xl border border-indigo-100 bg-white p-3 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <img class="h-40 w-full rounded-lg bg-indigo-100 object-cover" src="https://placehold.co/400x300/e0e7ff/4338ca?text=Desk+Lamp" alt="Desk lamp" loading="lazy">
+          <div class="flex flex-1 flex-col px-1 pt-3">
+            <h3 class="text-lg font-bold text-indigo-950">Desk Lamp</h3>
+            <p class="mt-2 font-bold text-slate-900">Rs. 499 <span class="ml-1 text-sm font-normal text-slate-400 line-through">Rs. 699</span></p>
+            <button type="button" class="mt-4 w-full rounded-md bg-indigo-600 px-3 py-2.5 text-sm font-bold text-white transition-colors hover:bg-indigo-700 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600" data-add>Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- Product 8 -->
+        <article class="flex h-full flex-col overflow-hidden rounded-xl border border-indigo-100 bg-white p-3 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <img class="h-40 w-full rounded-lg bg-indigo-100 object-cover" src="https://placehold.co/400x300/e0e7ff/4338ca?text=Pen+Set" alt="Pen set" loading="lazy">
+          <div class="flex flex-1 flex-col px-1 pt-3">
+            <h3 class="text-lg font-bold text-indigo-950">Pen Set</h3>
+            <p class="mt-2 font-bold text-slate-900">Rs. 99 <span class="ml-1 text-sm font-normal text-slate-400 line-through">Rs. 149</span></p>
+            <button type="button" class="mt-4 w-full rounded-md bg-indigo-600 px-3 py-2.5 text-sm font-bold text-white transition-colors hover:bg-indigo-700 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600" data-add>Add to Cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="cart" class="bg-indigo-950 px-4 py-6 text-center text-indigo-200">
+    <p>&copy; 2026 CampusKart</p>
+    <div class="mt-2 flex justify-center gap-6">
+      <a href="#" class="transition-colors hover:text-amber-400">About</a>
+      <a href="#" class="transition-colors hover:text-amber-400">Contact</a>
+    </div>
+    <p class="mt-3 text-xs text-indigo-300">Demo shopping page for educational use.</p>
+  </footer>
+
+  <script>
+    // Small demo interaction: update the cart count when a product is added.
+    const cartCount = document.getElementById("cart-count");
+    const addButtons = document.querySelectorAll("[data-add]");
+    let cartItems = 0;
+
+    addButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        cartItems += 1;
+        cartCount.textContent = cartItems;
+        button.textContent = "Added!";
+        button.classList.remove("bg-indigo-600", "hover:bg-indigo-700");
+        button.classList.add("bg-emerald-600", "hover:bg-emerald-700");
+      });
+    });
+  </script>
+</body>
+</html>
